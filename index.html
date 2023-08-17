@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>BFS</title>
+
+  <!-- 
+    - favicon link
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+
+    <!-- 
+      - overlay
+    -->
+    <div class="overlay" data-overlay></div>
+
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" alt="BFS logo" style="height: 110px;">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-nav>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" alt="GameX logo" style="height: 110px;">
+          </a>
+
+          <button class="nav-close-btn" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#hero" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About</a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="navbar-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#team" class="navbar-link">Players</a>
+          </li>
+
+          <li>
+            <a href="#gears" class="navbar-link">BFS Team</a>
+          </li>
+
+          
+
+        </ul>
+
+        <ul class="nav-social-list">
+
+          
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="hero">
+        <div class="container" >
+
+          <p class="hero-subtitle" style="color: #913774;" data-aos="flip-down" data-aos-duration="5000">Be The Best</p>
+
+          <h1 class="h1 hero-title" data-aos="flip-up" data-aos-duration="9000">B F S</h1>
+
+          <div class="btn-group" data-aos="slide-up" data-aos-duration="1000">
+
+            <button class="btn btn-primary">
+              <span>Follow on Instagram</span>
+
+              <ion-icon name="play-circle"></ion-icon>
+            </button>
+
+            <button class="btn btn-link">Youtube</button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <div class="section-wrapper">
+
+        <!-- 
+          - #ABOUT
+        -->
+
+        <section class="about" id="about">
+          <div class="container" >
+
+            <figure class="about-banner">
+
+              <img src="./assets/images/about-img.png" data-aos="zoom-out" data-aos-duration="2000" alt="Sourav badaya" class="about-img" style="height: 430px; width: 500px -webkit-transform: scaleX(-1);
+              transform: scaleX(-1);; ">
+
+
+            </figure>
+
+            <div class="about-content" data-aos="slide-right" data-aos-duration="1000">
+
+              <p class="about-subtitle">Owner Of BFS</p>
+
+              <h2 class="about-title">Mr. Sourav  <strong>Badaya</strong> </h2>
+
+              <p class="about-text">
+                
+A perfect platform to pursue your sporting & fitness dreams with us with best class facilities and training by expert coaches and renowned mentors to encourage young sports enthusiasts and support athletes. We offer multiple sports activities & training as well and through our unique work model that focuses on play, learn, team & lead as a champion.
+              </p>
+
+              <p class="about-bottom-text">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+
+                <span>We have two branches of BFS in Jaipur: Bani park and Ambabari.</span>
+              </p>
+              <br>
+              <p class="about-bottom-text">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+
+                <span>We have different coach for different Branches.</span>
+              </p>
+              <br>
+              <p class="about-bottom-text">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+
+                <span>Mr. Rahul is the Coach for Bani Park branch.</span>
+              </p>
+              <br>
+              <p class="about-bottom-text">
+                <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+
+                <span>Mr. Ajay is the Coach for Ambabari branch.</span>
+              </p>
+
+            </div>
+
+          </div>
+        </section>
+
+
+
+
+
+        
+
+
+
+
+
+        <!-- 
+          - #GALLERY
+        -->
+
+        <section class="gallery" id="gallery">
+          <div class="container">
+
+            <h2 class="h2 section-title">We Save Memories</h2>
+
+            <ul class="gallery-list has-scrollbar">
+
+              <li>
+                <figure class="gallery-item">
+                  <img src="./assets/images/gallery-img-1.jpg" alt="Gallery image"  data-aos="zoom-out-up" data-aos-duration="1000">
+                </figure>
+              </li>
+
+              <li>
+                <figure class="gallery-item">
+                  <img src="./assets/images/gallery-img-2.jpg" alt="Gallery image" data-aos="zoom-out-down" data-aos-duration="1000" >
+                </figure>
+              </li>
+
+              <li>
+                <figure class="gallery-item">
+                  <img src="./assets/images/gallery-img-3.jpg" alt="Gallery image" data-aos="zoom-out-up" data-aos-duration="1000" >
+                </figure>
+              </li>
+
+              
+              <li>
+                <figure class="gallery-item">
+                  <img src="./assets/images/gallery-img-4.jpg" alt="Gallery image" data-aos="zoom-out-down" data-aos-duration="1000">
+                </figure>
+              </li>
+            
+
+            </ul>
+
+          </div>
+        </section>
+
+
+
+
+
+        <!-- 
+          - #TEAM
+        -->
+
+        <section class="team" id="team">
+          <div class="container">
+
+            <h2 class="h2 section-title">Best Players from different Branches</h2>
+
+            <ul class="team-list">
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-1.png" alt="Team member image" data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-2.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-3.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-4.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-6.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-7.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-8.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-9.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-10.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-11.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="team-member">
+                  <figure>
+                    <img src="./assets/images/team-member-12.png" alt="Team member image"data-aos="fade-out" data-aos-duration="1000">
+                  </figure>
+
+                  <ion-icon name="link-outline"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+
+          </div>
+        </section>
+
+
+
+
+
+        <!-- 
+          - #GEARS
+        -->
+
+        <section class="gears" id="gears">
+          <div class="container">
+
+            <h2 class="h2 section-title">BFS Team </h2>
+
+            <ul class="gears-list">
+
+              <li >
+                <div class="gears-card" data-aos="zoom-out-right" data-aos-duration="2000">
+
+                  <div class="card-banner">
+
+                    <a href="#">
+                      <img src="./assets/images/gears-img-1.png" alt="Headphone" >
+                    </a>
+
+                    
+
+                    <div class="card-time-wrapper">
+
+                      <span>Coach BaniPark</span>
+                    </div>
+
+                  </div>
+
+                  <div class="card-content">
+
+                    <div class="card-title-wrapper">
+
+                      <h3 class="h3 card-title">Mr. Rahul</h3>
+
+                      <p class="card-subtitle">Coach Of Bani Park Branch</p>
+
+                    </div>
+
+
+
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button class="btn btn-primary">
+                      <ion-icon name="add-outline"></ion-icon>
+
+                      <span>Follow on Instagram</span>
+                    </button>
+
+                    
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="gears-card" data-aos="fade-down-right" data-aos-duration="2000">
+
+                  <div class="card-banner">
+
+                    <a href="#">
+                      <img src="./assets/images/gears-img-2.png" alt="Owner" style="width: 200px;">
+                    </a>
+
+                    
+
+                    <div class="card-time-wrapper">
+
+                      <span>Owner of BFS</span>
+                    </div>
+
+                  </div>
+
+                  <div class="card-content">
+
+                    <div class="card-title-wrapper">
+
+                      <h3 class="h3 card-title">Mr. Saurabh Badaya</h3>
+
+                      <p class="card-subtitle">Owner of Badaya Fitness and Sports</p>
+
+                    </div>
+
+               
+
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button class="btn btn-primary">
+                      <ion-icon name="add-outline"></ion-icon>
+
+                      <span>Follow on Instagram</span>
+                    </button>
+
+                    
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="gears-card" data-aos="fade-down-right" data-aos-duration="2000">
+
+                  <div class="card-banner">
+
+                    <a href="#">
+                      <img src="./assets/images/gears-img-3.png" alt="Gaming mask" style="width: 250px;">
+                    </a>
+
+                    
+
+                    <div class="card-time-wrapper">
+                      
+
+                      <span>Coach Ambabari</span>
+                    </div>
+
+                  </div>
+
+                  <div class="card-content">
+
+                    <div class="card-title-wrapper">
+
+                      <h3 class="h3 card-title">Mr. Ajay Singh</h3>
+
+                      <p class="card-subtitle">Coach of Ambabari Branch</p>
+
+                    </div>
+
+                    
+
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button class="btn btn-primary">
+                      <ion-icon name="add-outline"></ion-icon>
+
+                      <span>Follow on Instagram</span>
+                    </button>
+
+                    
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+
+
+
+
+        <!-- 
+          - #NEWSLETTER
+        -->
+
+        
+
+      </div>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" alt="GameX logo" style="height: 150px; padding-top: 0px;">
+          </a>
+
+          <div class="footer-menu-wrapper">
+
+            <ul class="footer-menu-list">
+
+              <li>
+                <a href="#hero" class="footer-menu-link">Home</a>
+              </li>
+
+              <li>
+                <a href="#about" class="footer-menu-link">About</a>
+              </li>
+
+              <li>
+                <a href="#gallery" class="footer-menu-link">Gallery</a>
+              </li>
+
+              <li>
+                <a href="#team" class="footer-menu-link">Players</a>
+              </li>
+
+              <li>
+                <a href="#gears" class="footer-menu-link">BFS Team</a>
+              </li>
+
+              
+
+            </ul>
+
+            
+
+          </div>
+
+        </div>
+
+        <div class="footer-quicklinks">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-item">Instagram</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-item">Youtube</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-item">Coming Soon</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-item">Coming Soon</a>
+            </li>
+
+          </ul>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; 2023 | Made by <a href="https://aryancoder007.github.io/portfolio">Aryan Programmer</a> for <a href="" style="color: #913774;">BFS</a> with ❤️ | all rights reserved
+        </p>
+
+        
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="btn btn-primary go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
