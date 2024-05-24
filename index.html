@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BFS - Badaya Fitness and Sports</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/logowb.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="https://www.instagram.com/bfszone/" class="logo">
+        <ion-icon name="basketball"  aria-hidden="true" style="margin-right: 10px; color: #F8BF87;"></ion-icon>
+
+        <span class="span" style="color: #A74D7D;">BFS - Be The Best</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link active" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+          <li>
+            <a href="#class" class="navbar-link" data-nav-link>Reviews</a>
+          </li>
+
+          <li>
+            <a href="#coaches" class="navbar-link" data-nav-link>Coaches</a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/bfszone/" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="https://www.instagram.com/bfszone/" class="btn btn-secondary">Join Now</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">
+              <strong class="strong">The Best</strong>BasketBall Academy in Jaipur
+            </p>
+
+            <h1 class="h1 hero-title">We Prepare CHAMPIONS of BasketBall.</h1>
+
+            <p class="section-text">
+              It’s not about making a choice but it’s more about making the right choice with the right people.
+            </p>
+
+            <a href="#" class="btn btn-primary">Register Yourself</a>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/Hero-sec.png" width="250" height="250" alt="hero banner" class="w-100">
+
+            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+
+          
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <div class="about-banner has-after">
+            <img src="./assets/images/img2.jpg" width="660" height="648" loading="lazy" alt="about banner"
+              class="w-100">
+
+            <img src="./assets/images/about-circle-one.png" width="660" height="534" loading="lazy" aria-hidden="true"
+              alt="" class="circle circle-1">
+            <img src="./assets/images/about-circle-two.png" width="660" height="534" loading="lazy" aria-hidden="true"
+              alt="" class="circle circle-2">
+
+            <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness"
+              class="abs-img w-100">
+          </div>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Our Vision</p>
+
+            <h2 class="h2 section-title">Welcome To BFS Zone</h2>
+            <p class="section-text">
+              Helping children and young adults to realize their potential through sport and physical exercise is our main goal with the finest resources to be the best of themselves. Our unique work model focuses on play, learn, team & lead as a champion.            </p>
+
+            <p class="section-text">
+              Success in basketball comes from a player's ability to consistently execute the fundamental skills of the game and also from the coach's ability to coach and incorporate these skills into their training programs and matches.
+            </p>
+
+            <div class="wrapper">
+
+              <div class="about-coach">
+
+                <figure class="coach-avatar">
+                  <img src="./assets/images/about-coach.jpg" width="75" height="85" loading="lazy" alt="Trainer">
+                </figure>
+
+                <div>
+                  <h3 class="h3 coach-name">Mr. Saurabh Badaya</h3>
+
+                  <p class="coach-title">Owner of BFS Zone</p>
+                </div>
+
+              </div>
+
+              <a href="#" class="btn btn-primary">Know more</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #VIDEO
+      -->
+
+      <section class="section video" aria-label="video">
+        <div class="container">
+
+          <div class="video-card has-before has-bg-image"
+            style="background-image: url('./assets/images/video-banner.jpg')">
+
+            <h2 class="h2 card-title">View our Videos on Instagram</h2>
+
+            <button class="play-btn" aria-label="play video" onclick="insta()">
+              <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
+            </button>
+
+            <a href="https://www.instagram.com/bfszone/" class="btn-link has-before">Visit Instagram</a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CLASS
+      -->
+
+      <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
+        style="background-image: url('./assets/images/classes-bg.png')">
+        <div class="container">
+
+          <p class="section-subtitle">Reviews</p>
+
+          <h2 class="h2 section-title text-center">What People think about us!</h2>
+
+          <ul class="class-list has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/r.png" width="200" height="200" loading="lazy" alt="review pic error"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Dr. Diwakar Agarwal</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    "The BFS Zone's impact on our son has been tremendously positive both on the court and in his daily life. BFS zone has given our son confidence, technical skill, dedication to improving, and a passion for basketball. We are so impressed with how far he's come and owe it all to the outstanding coaching from saurabh badaya. " 
+
+
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Satisfaction level</p>
+
+                      <span class="progress-value">100%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/r.png" width="200" height="200" loading="lazy" alt="review pic error"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Saransh Goel</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    "A place for all basketball players.
+It is difficult to practice sports other than cricket in india mostly because of inadequate resources. I am glad I found BFS just near my house in bani park. Got the batch I wanted, played with the players of similar level or better. Days are divided into skills, fitness and match day.
+Saurabh sir is an amazing coach fs! ✌️"
+
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Satisfaction level</p>
+
+                      <span class="progress-value">100%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/r.png" width="200" height="200" loading="lazy" alt="review pic error"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Avishk Poddar</a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    "Very good academy they teach very good basketball and the coach is sourav badaya sir very good coach I have ever seen."
+
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Satisfaction level</p>
+
+                      <span class="progress-value">100%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="class-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
+                  <img src="./assets/images/r.png" width="200" height="200" loading="lazy" alt="review pic error"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="title-wrapper">
+                    <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true" alt=""
+                      class="title-icon">
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Anurag Bhutra
+                      </a>
+                    </h3>
+                  </div>
+
+                  <p class="card-text">
+                    "BFS Zone has been a huge help to my game over the off-season and during the regular season. My shot improved from struggling to shoot threes to being a confidant in-game 3-point shooter. It has helped me improve my strength in running and jumping and all-around building muscle. Not only that, but I have become a much smarter basketball player and dedicated student."
+
+
+                  </p>
+
+                  <div class="card-progress">
+
+                    <div class="progress-wrapper">
+                      <p class="progress-label">Satisfaction level</p>
+
+                      <span class="progress-value">100%</span>
+                    </div>
+
+                    <div class="progress-bg">
+                      <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="coaches" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Our Team</p>
+
+          <h2 class="h2 section-title text-center">Meet Our Exceptional Coaches
+          </h2>
+
+          <ul class="blog-list has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="./assets/images/blog-1d.jpg" width="440" height="270" loading="lazy"
+                    alt="coach img required" class="img-cover">
+
+                  <time class="card-meta" datetime="2022-07-07">BFS Bani park</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Mr. Rahul Dubey</a>
+                  </h3>
+
+                  <p class="card-text">
+                    ""  ""
+                  </p>
+
+                  <a href="#" class="btn-link has-before">Visit Instagram</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="./assets/images/blog-2fd.jpg" width="440" height="270" loading="lazy"
+                    alt="owner img required" class="img-cover">
+
+                  <time class="card-meta" datetime="2022-07-07">BFS Zone</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Mr. Saurabh Badaya</a>
+                  </h3>
+
+                  <p class="card-text">
+                    ""  ""
+                  </p>
+
+                  <a href="#" class="btn-link has-before">Visit Instagram</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
+                  <img src="./assets/images/blog-3sd.jpg" width="440" height="270" loading="lazy"
+                    alt="coach img required" class="img-cover">
+
+                  <time class="card-meta" datetime="2022-07-07">BFS Ambabari</time>
+                </div>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Mr. Ajay Singh</a>
+                  </h3>
+
+                  <p class="card-text">
+                    "" ""
+                  </p>
+
+                  <a href="#" class="btn-link has-before">Visit Instagram</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <ion-icon name="basketball" aria-hidden="true" style="margin-right: 10px;"></ion-icon>
+
+            <span class="span">BFS Zone</span>
+          </a>
+
+          <p class="footer-brand-text">
+            It’s not about making a choice but it’s more about making the right choice with the right people.
+
+
+          </p>
+
+          <div class="wrapper">
+
+            <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
+
+            <ul class="footer-brand-list">
+
+              <li>
+                <p class="footer-brand-title">Monday - Friday</p>
+
+                <p>6:00 Pm - 9:00 Pm</p>
+              </li>
+
+              <li>
+                <p class="footer-brand-title">Saturday </p>
+
+                <p> Inter-Branch Matches / Classes Closed </p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Links</p>
+          </li>
+
+          <li>
+            <a href="#home" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#reviews" class="footer-link">Reviews</a>
+          </li>
+
+          <li>
+            <a href="#coaches" class="footer-link">Coaches</a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/bfszone/" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Contact Us</p>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+            </div>
+
+            <address class="address footer-link">
+              1. Adarsh Vidya Mandir, Sindhi Colony, Bani Park, Jaipur, Rajasthan 302016. <br>  2. Tagore public school, Ambabari, Jaipur, Rajasthan 302032
+
+            </address>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+
+              <a href="tel:+918619381856" class="footer-link">+91 86193 81856</a>
+            </div>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="mailto:info@bfszone.com" class="footer-link">info@bfszone.com</a>
+
+            </div>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Newsletter</p>
+          </li>
+
+          <li>
+            <form action="" class="footer-form">
+              <input type="email" name="email_address" aria-label="email" placeholder="Email Address" required
+                class="input-field">
+
+              <button type="submit" class="btn btn-primary" aria-label="Submit" href="mailto:info@bfszone.com">
+                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+              </button>
+            </form>
+          </li>
+
+          <li>
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 BFS | All Rights Reserved | Made with 💝 for BFS by <a href="https://aryancoder007.github.io/portfolio" class="copyright-link">Aryan Programmer.</a>
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link has-before">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link has-before">Terms & Condition</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
